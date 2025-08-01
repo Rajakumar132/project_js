@@ -28,7 +28,6 @@ padding: 0.9em;
 border-radius: 20px;
 background-color: white;
 box-shadow: 5px 6px 3px rgb(94, 212, 182);
-
 }
 #qrtext{
     width:19em;
@@ -48,4 +47,9 @@ button{
     font-size: unset;
     font-weight: 500;
     background-color: rgb(92, 235, 143);
+    cursor: pointer;
+}
+button:hover{
+    background-color: aqua;
+    transition-duration: 2s;
 }
