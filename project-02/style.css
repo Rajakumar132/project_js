@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: Space Grotesk;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    
+}
+#container{
+    width:100%;
+    height:100%;
+    display: flex;
+ 
+}
+#card1{
+           width: 27.9em;
+    height: 15.3em;
+    background-image: url("card1.png");
+    position: absolute;
+    left:8.9em;
+    top:6em;
+    z-index: 1;
+}
+#card1 #logo-card{
+    width:6em;
+    height:3em;
+    margin: 1em 0em 0em 1em;
+}
+#card1 h1{
+    text-align: center;
+    margin-top: 2.4em;
+    font-size: 2em;
+    color:white;
+}
+#card1 #username{
+       font-weight: 600;
+    font-size: 20px;
+    position: relative;
+        top: 0.4em;
+    left: 2.3em;
+    color: aliceblue;
+}
+#card1 #date{
+     font-weight: 600;
+    font-size: 20px;
+    position: fixed;
+       top: 14.4em;
+    left: 23.7em;
+    color: aliceblue;
+}
+#card2{
+  width: 27.9em;
+    height: 15.3em;
+    background-image: url("card2.png");
+    z-index: 2;
+    position: absolute;
+    left:14.9em;
+    top:27em;
+    
+}
+#card2 #cvcCard{
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    top:5.5em;
+    left:18em;
+    color: aliceblue;
+  
+}
+.main1{
+    width:42%;
+    height:100%;
+    background-image: url("main1.png");
+    background-repeat: no-repeat;
+}
+.main2{
+    width:70%;
+    height:100%;
+    background-color: rgb(253, 254, 254);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ 
+}
+form{
+    width:21em;
+    height:auto;
+    margin-left: 10em;
+    color: #3c3243;
+
+  font-weight: bold;
+     font-size: 19px;
+}
+label{
+    font-family: sans-serif;
+}
+form #name{
+    width: 100%;
+    padding: 0.9em;
+   margin:0.4em 0em 0.6em 0em;
+   border:1px solid #dfdfdf;
+   outline: none;
+   border-radius: 10px;
+}
+ form #no{
+     padding: 0.9em;
+     width: 100%;
+       margin:0.4em 0em 0.9em 0em;
+       border:1px solid #dfdfdf;
+   outline: none;
+border-radius: 10px;
+ }
+ form #exp{
+     padding: 0.8em;
+    width:3.8em;
+       margin:0.4em 0.7em 0.9em 0em;
+       border:1px solid #dfdfdf;
+   outline: none;
+border-radius: 10px;
+ }
+ form #cv{
+
+   margin-left: 3.3em;
+ }
+ form #CVC{
+     padding: 0.6em;
+    width:12em;
+    margin:0.4em 0em 0.9em 0.8em;
+    float: right; 
+    border:1px solid #dfdfdf;
+   outline: none;
+   border-radius: 10px;
+ }
+ form button{
+    width:100%;
+    padding: 0.8em;
+    background-color: #220930;
+    color:#ddd2e1;
+    margin:0.9em 0em 0.9em 0em ;
+    border:none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+ }
+ #pop{
+
+    width:35vw;
+    height:45vh;
+    text-align: center;
+    padding: 0.8em;
+      font-size: 21px;
+      position: absolute;
+      top:50%;
+      left: 77%;
+      transform: translate(-50%,-50%) scale(1);
+      visibility: hidden;
+      transition: transform 0.4s,top 0.4s;
+      background-color: #ffff;
+ }
+
+ #pop button{
+    width: 50%;
+    padding: 0.8em;
+     background-color: #220930;
+    color:#ddd2e1;
+    margin:2.2em 0em 0.9em 0em ;
+    border:none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+ }
+@media (max-width:600px){
+   #container{
+    display: block;
+   } 
+   .main1{
+    width:100%;
+    height:13em;
+    background-image: url("bg-main-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#card1{
+           width: 17.9em;
+    height: 11em;
+    background-image: url("card1.png");
+    background-size: cover;
+    position: absolute;
+    border-radius: 10px;
+    left:1.5em;
+    top:8em;
+    z-index: 1;
+}
+#card1 #logo-card{
+    width:2em;
+    height:1em;
+    margin: 1em 0em 0em 1em;
+}
+#card1 h1{
+    font-size: 1.2em;
+}
+#card1 #username{
+       font-weight: 600;
+    font-size: 15px;
+    position: relative;
+        top: 0em;
+    left: 1.3em;
+    color: aliceblue;
+}
+#card1 #date{
+    font-size: 17px;
+      top: 14em;
+        left: 12.8em;
+}
+#card2{
+ width: 17.9em;
+    height: 11em;
+    background-image: url("card2.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+    z-index:revert-layer; 
+
+     /* new concept  */
+    position: absolute;
+   left:2.4em;
+    top:1em;
+     border-radius: 10px;
+    
+}
+#card2 #cvcCard{
+          font-size: 18px;
+        top: 3.6em;
+        left: 12.2em;
+}
+form{
+   width:23em;
+    height:auto;
+   float: right;
+    margin-left: 1.4em;
+    font-size: 16px;
+}
+form #CVC{
+     padding: 0.6em;
+    width:7em;
+    margin:0.4em 0em 0.9em 0.8em;
+    float: right; 
+    border:1px solid #dfdfdf;
+   outline: none;
+   border-radius: 10px;
+ }
+ #pop{
+
+    width:96vw;
+    height:53vh;
+    text-align: center;
+    padding: 0.8em;
+      font-size: 21px;
+      position: absolute;
+      top:76%;
+      left: 48%;
+      transform: translate(-50%,-50%) scale(1);
+      visibility: hidden;
+      transition: transform 0.4s,top 0.4s;
+      background-color: #ffff;
+ }
+  form #CVC{
+    width:12em;
+    margin:-3.6em 0em 0.9em 11.8em;
+ }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="card1">
+            <img id="logo-card" src="card-logo.svg" alt="logo"> <h1 id="number">0000  0000  0000  0000</h1>
+        <span id="username">jasian</span>
+    <span id="date">
+        <span class="Mon">00</span>
+        /
+        <span class="yy">00</span>
+    </span></div>
+        <div id="card2">
+            <span id="cvcCard">000</span>
+        </div>
+        <div class="main1">
+           
+        </div>
+        <div class="main2">
+            <form >
+               <lable for="username">CARDHOLDER NAME</lable><br>
+                <input type="text" placeholder="Enter Your Name" id="name" name="username" required><br>
+                <lable for="card">CARD NUMBER</lable><br>
+                <input type="number" placeholder="Enter Your Card Number" id="no" name="card" minlength="16" required><br>
+                 <label for="exp">EXP. DATE(MM/YY)</label> <label for="cv" id="cv">CVC</label><br>
+                 <input type="text"  id="exp" maxlength="2" name="exp" class="month" placeholder="MM" required>
+                  <input type="text" name="exp" id="exp" minlength="2" class="year" placeholder="YY" required>
+                  <input type="text" name="cv" id="CVC" placeholder="CVC" required><br>
+                  <button type="button" onclick="pop()">Confirm</button>
+            </form>
+            <div id="pop" >
+                <img src="icon-complete.svg" alt="icon-complete">
+                <h2>Thank You!</h2>
+                <p> We've added your card details</p>
+                <button type="submit" onclick="closepop()"> OK</button>
+            </div>
+        </div>
+    </div>
+    <script>
+            document.getElementById("name").addEventListener("input", function(){
+ document.getElementById("username").textContent= this.value;
+          });
+             document.getElementById("no").addEventListener("input", function(){
+                let formating =this.value.replace(/(.{4})/g, "$1 ").trim();
+ document.getElementById("number").textContent= formating;
+          });
+              document.getElementsByClassName("month")[0].addEventListener("input", function(){
+ document.getElementsByClassName("Mon")[0].textContent= this.value;
+          });
+               document.getElementsByClassName("year")[0].addEventListener("input", function(){
+ document.getElementsByClassName("yy")[0].textContent= this.value;
+          });
+               document.getElementById("CVC").addEventListener("input", function(){
+ document.getElementById("cvcCard").textContent= this.value;
+          });
+function pop(){
+    let open=document.getElementById("pop");
+    open.style.visibility ="visible";
+}
+function closepop(){
+    let open=document.getElementById("pop");
+    open.style.visibility ="hidden";
+}
+    </script>
+</body>
+</html>
